@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contador</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">       
+    </head>
+    <body>
+
+        <header class="header">
+            <nav class="nav">
+                <a href="#" class="logo nav-link">David Lemus</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a href="C:\Users\NC659QS\OneDrive - EY\Desktop\Prueba\punto1-2-3.html" class="nav-menu-link">Contar vocales y numeros</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="C:\Users\NC659QS\OneDrive - EY\Desktop\Prueba\punto4-5.html" class="nav-menu-link">Invertir palabras</a>
+                    </li>
+                </ul>    
+            </nav>
+        </header>
+
+        <main>
+            <h4>Contador de vocales y numeros</h4>
+            <br><br>
+            <input class = "caja" type="text" placeholder="Ingrese un texto" id="CajaTexto"><br><br>
+            <button class = "button" onclick="contador();"> Contar </button>
+
+            <picture>
+            <img alt="Cambiar imagen" height="auto" onmouseout="this.src='https://publicdomainvectors.org/photos/nicubunu_Weather_Symbols_Sun.png';" onmouseover="this.src='https://publicdomainvectors.org/photos/rg1024-Moon-in-comic-style.png';" src="https://publicdomainvectors.org/photos/nicubunu_Weather_Symbols_Sun.png" />
+            </picture>
+
+        </main>
+        <script type="text/javascript">
+        function contador(){
+            
+            var texto = document.getElementById('CajaTexto').value;
+            var vocales = texto.match(/[aeiou]/gi).length;
+            var numeros = texto.match(/[1234567890]/gi).length;;
+
+            alert("Hay " + vocales + " vocal(es) y " + numeros +" numero(s)");
+            
+        }
+        </script>
+    </body>
+</html>
